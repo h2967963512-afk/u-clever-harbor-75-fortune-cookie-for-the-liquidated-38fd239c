@@ -1,6 +1,13 @@
 """Writes the entry text to /output/entry.txt.
 
 Python 3.13, standard library only, no network.
+
+How it runs: `python3 main.py` creates /output if needed and writes the
+single TEXT constant to /output/entry.txt as UTF-8 with no trailing newline.
+
+Verified by running main.py and hashing /output/entry.txt: the file is a
+single line, 88 characters, UTF-8, no trailing newline; re-running the
+program reproduces the exact same bytes (identical sha256).
 """
 
 import os
